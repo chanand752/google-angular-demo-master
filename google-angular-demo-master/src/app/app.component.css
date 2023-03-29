@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+.googleButton {
+    display: flex;
+    justify-content: center;
+}
+
+:host::ng-deep.p-card .p-card-title {
+    color: #13b713; 
+  
+}
+
+:host::ng-deep.p-card .p-card-body {
+    background-color: #ebe1e1;
+}
+

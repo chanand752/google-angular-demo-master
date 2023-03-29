@@ -1,0 +1,27 @@
+<!-- <div *ngIf="!user" class="card">
+ <asl-google-signin-button class="g_id_signin" type="standard"></asl-google-signin-button>
+</div> -->
+<div *ngIf="!user" class="card">
+  <p-card header="SSO With Google" [style]="{ width: '360px' }">
+   
+    <asl-google-signin-button class="g_id_signin googleButton" type="standard"></asl-google-signin-button>
+  </p-card>
+  </div>
+
+<div *ngIf="user" class="card">
+  <p-card header="Welcome" [style]="{ width: '360px' }">
+  <img src="{{ user.photoUrl }}">
+  <div>
+    <h4>{{ user.name }}</h4>
+    <p>{{ user.email }}</p>
+  </div>
+  <p-button (click)="logout()">Signout</p-button>
+</p-card>
+</div>
+<button (click)="testStatus(200)">Test Status</button>
+<button (click)="testData()">Test Data</button>
+<button (click)="testDataRewrite()">Test Data Rewrite</button>
+
+<router-outlet></router-outlet>
+
+

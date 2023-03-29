@@ -1,0 +1,13 @@
+ {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "x-options": "https://github.com/chimurai/http-proxy-middleware#options",
+    "/api": {
+      "target": "https://jsonplaceholder.typicode.com",
+      "changeOrigin": true,
+      "secure": false,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
